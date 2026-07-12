@@ -1,0 +1,126 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #0f1117;
+  color: #f2f2f2;
+}
+
+.navbar {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background: #161923;
+  border-bottom: 1px solid #262a38;
+}
+
+.navbar a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.navbar a:hover { color: #e63946; }
+
+.home-page, .favorites-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 { margin-top: 0; }
+
+.search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1c1f2b;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.mood-matcher {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #161923;
+  border-radius: 8px;
+}
+
+.mood-matcher form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mood-matcher input {
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #1c1f2b;
+  color: #fff;
+}
+
+.mood-matcher button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  cursor: pointer;
+}
+
+.error { color: #e63946; }
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.2rem;
+}
+
+.movie-card {
+  position: relative;
+  background: #161923;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-poster.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #262a38;
+  color: #888;
+}
+
+.movie-info { padding: 0.6rem; }
+.movie-info h3 { margin: 0 0 0.3rem; font-size: 0.95rem; }
+.movie-info p { margin: 0; font-size: 0.85rem; color: #aaa; }
+
+.heart-btn {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.heart-btn.active { color: #e63946; }
+
+.scroll-sentinel { height: 1px; }
+.loading { text-align: center; color: #888; }
