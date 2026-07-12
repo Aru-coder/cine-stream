@@ -20,7 +20,6 @@ by Gemini.
    VITE_TMDB_TOKEN=your_tmdb_read_access_token
    VITE_GEMINI_KEY=your_gemini_api_key
    ```
-   `.env` is already in `.gitignore` — it will never be committed.
 
 3. Run locally:
    ```
